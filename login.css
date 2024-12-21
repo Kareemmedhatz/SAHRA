@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:linear-gradient(330.57deg, #183949 0.29%, #040405 90.62%);
+    background-repeat: no-repeat;
+}
+.title img{
+    height: 65px;
+    width: 150px;
+    display: flex;
+    margin: 25px auto;
+}
+.field{
+    width: 600px;
+    height: 580px;
+    margin:  0 auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+
+}
+.field .logo {
+    padding: 25px 50px 10px 50px;
+}
+.field .logo svg{
+    font-size: 70px;
+}
+.field .content{
+    margin: 10px 50px 15px 50px;
+}
+.field .content p{
+    margin-top: 10px;
+}
+.form{
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+.form input{
+    width: 85%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgb(97, 96, 96);
+    border-radius: 10px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 15px;
+    margin-left: 45px;
+}
+.form label{
+    position: absolute;
+    top: 15px;
+    left: 60px;
+    color: rgb(151, 151, 151);
+    text-transform: capitalize;
+    transition: top 0.3s;
+    padding: 0;
+}
+.form input:focus ~ label{
+    top: -9px;
+    background-color: white;
+}
+.field .btn{
+    margin: 20px;
+}
+.field .btn button{
+    width: 92%;
+    height: 50px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 22px
+}
+.field .btn button:hover{
+    background-color: rgb(43, 43, 43);
+    transition: background-color 0.1s;
+}
+.field hr{
+    width: 80%;
+    margin: 35px auto;
+    background-color: rgb(169, 166, 166);
+}
+.field .end{
+    margin: 15px 48px;
+}
+.field .end h5{
+    padding-bottom: 15px;
+    color: rgb(97, 96, 96);
+}
+.field .end p{
+    font-size: 13px;
+    color: gray;
+}
+.field .end a{
+    text-decoration: none;
+    font-size: 13px;
+}
+.field .icons div{
+    display: inline-block;
+    margin: 20px 15px;
+    font-size: 30px;
+    color: gray;
+}
+.field .icons div svg{
+    padding: 10px;
+}
+footer{
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    margin-top: 100px;
+}
+footer .links{
+    margin-left: 470px;
+}
+footer .links a{
+    display: inline-block;
+    padding: 0 10px;
+    color: gray;
+    text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer .links span{
+    color: gray;
+}

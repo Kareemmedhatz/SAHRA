@@ -1,0 +1,603 @@
+    @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+    * {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "PT Sans", sans-serif;
+    }
+
+    /* NavBar Style */
+    nav {
+    position: fixed;
+    background: linear-gradient(
+        to right,
+        black,
+        rgba(0, 0, 0, 0.815),
+        rgb(0, 155, 88),
+        rgb(11, 242, 142)
+    );
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    }
+
+    .logo {
+    padding-left: 13px;
+    }
+
+    nav img {
+    height: 55px;
+    }
+
+    .categories {
+    display: flex;
+    justify-content: center;
+    gap: 50%;
+    font-size: 20px;
+    }
+
+    .categories a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0.6px 1.5px rgba(0, 0, 0, 0.493);
+    }
+
+    .categories a::after,
+    .categories a.active::after {
+    content: "";
+    background-color: white;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 0%;
+    transition: width 0.4s;
+    }
+
+    .categories a:hover::after,
+    .categories a.active::after {
+    width: 100%;
+    }
+
+    .search-bar {
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    }
+
+    .search-bar input {
+    padding-left: 10px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.452);
+    font-size: 16px;
+    }
+
+    .search-bar input::placeholder {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.76);
+    }
+
+    .search-bar button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 25px;
+    text-shadow: 0.6px 1.5px #ffffff5f;
+    }
+
+    .search-bar button:hover {
+    transform: rotate(13deg);
+    transition: 0.3s;
+    }
+
+    /* All Sections Style */
+    section  {
+    background: linear-gradient(
+        to right,
+        black,
+        rgba(0, 0, 0, 0.815),
+        rgb(0, 155, 88),
+        rgb(11, 242, 142)
+    );
+    height: 76vh;
+    display: flex;
+    flex-direction: column;
+    }
+
+    section p {
+    color: whitesmoke;
+    padding-left: 10px;
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .images {
+    display: flex;
+    width: 98.4%;
+    gap: 14px;
+    padding: 10px;
+    }
+
+    /* Action Section Style */
+    .action,
+    .comedy,
+    .romantic,
+    .historic {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 70px;
+    gap: 14px;
+    }
+
+    .img-container {
+    position: relative;
+    flex: 1;
+    width: 20px;
+    height: 55vh;
+    transition: flex 0.5s ease;
+    cursor: pointer;
+    }
+
+    .img-container img {
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.8s;
+    }
+
+    .small {
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    }
+
+    .big {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    }
+
+    .big:hover {
+    opacity: 0.95;
+    }
+
+    .img-container:hover {
+    flex: 1.8;
+    }
+
+    .img-container:not(:hover) {
+    flex: 0.6;
+    }
+
+    #papel::after,
+    #papel::before,
+    #w-dead::after,
+    #w-dead::before,
+    #prison::after,
+    #prison::before,
+    #boys::after,
+    #boys::before,
+    #agent::after,
+    #agent::before,
+    #kingdom::after,
+    #kingdom::before,
+    #girls::after,
+    #girls::before,
+    #fubar::after,
+    #fubar::before,
+    #tedlasso::after,
+    #tedlasso::before,
+    #seinfeld::after,
+    #seinfeld::before,
+    #theoffice::after,
+    #theoffice::before,
+    #umbrella::after,
+    #umbrella::before,
+    #bridgerton::after,
+    #bridgerton::before,
+    #jane::after,
+    #jane::before,
+    #outlander::after,
+    #outlander::before,
+    #goodplace::after,
+    #goodplace::before,
+    #show::after,
+    #show::before,
+    #you::after,
+    #you::before,
+    #adams::after,
+    #adams::before,
+    #rome::after,
+    #rome::before,
+    #pacific::after,
+    #pacific::before,
+    #usa-exp::after,
+    #usa-exp::before,
+    #usa-story::after,
+    #usa-story::before,
+    #vikings::after,
+    #vikings::before{
+    position: absolute;
+    left: 10px;
+    font-size: 22px;
+    color: aliceblue;
+    text-shadow: 0.5px 1.5px black;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    z-index: 1;
+    }
+    #papel::after {
+    content: "La Casa De Papel";
+    top: 70%;
+    }
+
+    #papel::before {
+    content: "2017- 5 Seasons";
+    top: 80%;
+    }
+
+    #papel:hover::after,
+    #papel:hover::before {
+    opacity: 1;
+    }
+
+    #w-dead::after {
+    content: "The Walking Dead";
+    top: 70%;
+    }
+
+    #w-dead::before {
+    content: "2010- 11 Seasons";
+    top: 80%;
+    }
+
+    #w-dead:hover::after,
+    #w-dead:hover::before {
+    opacity: 1;
+    }
+
+    #prison::after {
+    content: "Prison Break";
+    top: 70%;
+    }
+
+    #prison::before {
+    content: "2005- 5 Seasons";
+    top: 80%;
+    }
+
+    #prison:hover::after,
+    #prison:hover::before {
+    opacity: 1;
+    }
+
+    #boys::after {
+    content: "The Boys";
+    top: 70%;
+    }
+
+    #boys::before {
+    content: "2019- 4 Seasons";
+    top: 80%;
+    }
+
+    #boys:hover::after,
+    #boys:hover::before {
+    opacity: 1;
+    }
+
+    #agent::after {
+    content: "The Night Agent";
+    top: 70%;
+    }
+
+    #agent::before {
+    content: "2023- 1 Season";
+    top: 80%;
+    }
+
+    #agent:hover::after,
+    #agent:hover::before {
+    opacity: 1;
+    }
+
+    #kingdom::after {
+    content: "The Last Kingdom";
+    top: 70%;
+    }
+
+    #kingdom::before {
+    content: "2015- 4 Seasons";
+    top: 80%;
+    }
+
+    #kingdom:hover::after,
+    #kingdom:hover::before {
+    opacity: 1;
+    }
+
+    #girls::after {
+    content: "Derry Girls";
+    top: 70%;
+    }
+
+    #girls::before {
+    content: "2018- 3 Seasons";
+    top: 80%;
+    }
+
+    #girls:hover::after,
+    #girls:hover::before {
+    opacity: 1;
+    }
+
+    #fubar::after {
+    content: "Fubar";
+    top: 70%;
+    }
+
+    #fubar::before {
+    content: "2023- 1 Season";
+    top: 80%;
+    }
+
+    #fubar:hover::after,
+    #fubar:hover::before {
+    opacity: 1;
+    }
+
+    #seinfeld::after {
+    content: "Seinfeld";
+    top: 70%;
+    }
+
+    #seinfeld::before {
+    content: "1989- 9 Seasons";
+    top: 80%;
+    }
+
+    #seinfeld:hover::after,
+    #seinfeld:hover::before {
+    opacity: 1;
+    }
+
+    #tedlasso::after {
+    content: "Ted Lasso";
+    top: 70%;
+    }
+
+    #tedlasso::before {
+    content: "2020- 3 Seasons";
+    top: 80%;
+    }
+
+    #tedlasso:hover::after,
+    #tedlasso:hover::before {
+    opacity: 1;
+    }
+
+    #theoffice::after {
+    content: "The Office";
+    top: 70%;
+    }
+
+    #theoffice::before {
+    content: "2005- 9 Seasons";
+    top: 80%;
+    }
+
+    #theoffice:hover::after,
+    #theoffice:hover::before {
+    opacity: 1;
+    }
+
+    #umbrella::after {
+    content: "The Umbrella Academy";
+    top: 70%;
+    }
+
+    #umbrella::before {
+    content: "2019- 4 Seasons";
+    top: 80%;
+    }
+
+    #umbrella:hover::after,
+    #umbrella:hover::before {
+    opacity: 1;
+    }
+
+    #bridgerton::after {
+    content: "Bridgerton";
+    top: 70%;
+    }
+
+    #bridgerton::before {
+    content: "2020- 3 Seasons";
+    top: 80%;
+    }
+
+    #bridgerton:hover::after,
+    #bridgerton:hover::before {
+    opacity: 1;
+    }
+
+    #jane::after {
+    content: "My Lady Jane";
+    top: 70%;
+    }
+
+    #jane::before {
+    content: "2024- 1 Season";
+    top: 80%;
+    }
+
+    #jane:hover::after,
+    #jane:hover::before {
+    opacity: 1;
+    } 
+
+    #outlander::after {
+    content: "Outlander";
+    top: 70%;
+    }
+
+    #outlander::before {
+    content: "2014- 7 Seasons";
+    top: 80%;
+    }
+
+    #outlander:hover::after,
+    #outlander:hover::before {
+    opacity: 1;
+    }
+
+    #goodplace::after {
+    content: "The Good Place";
+    top: 70%;
+    }
+
+    #goodplace::before {
+    content: "2016- 4 Seasons";
+    top: 80%;
+    }
+
+    #goodplace:hover::after,
+    #goodplace:hover::before {
+    opacity: 1;
+    }
+
+    #show::after {
+    content: "That 90s Show";
+    top: 70%;
+    }
+
+    #show::before {
+    content: "2023- 3 Seasons";
+    top: 80%;
+    }
+
+    #show:hover::after,
+    #show:hover::before {
+    opacity: 1;
+    }
+
+    #you::after {
+    content: "You";
+    top: 70%;
+    }
+
+    #you::before {
+    content: "2018- 4 Seasons";
+    top: 80%;
+    }
+
+    #you:hover::after,
+    #you:hover::before {
+    opacity: 1;
+    }
+
+    #adams::after {
+    content: "John Adams";
+    top: 70%;
+    }
+
+    #adams::before {
+    content: "2008- 1 Season";
+    top: 80%;
+    }
+
+    #adams:hover::after,
+    #adams:hover::before {
+    opacity: 1;
+    }
+
+    #rome::after {
+    content: "Rome";
+    top: 70%;
+    }
+
+    #rome::before {
+    content: "2005- 2 Seasons";
+    top: 80%;
+    }
+
+    #rome:hover::after,
+    #rome:hover::before {
+    opacity: 1;
+    }
+
+    #pacific::after {
+    content: "The Pacific";
+    top: 70%;
+    }
+
+    #pacific::before {
+    content: "2010- 1 Season";
+    top: 80%;
+    }
+
+    #pacific:hover::after,
+    #pacific:hover::before {
+    opacity: 1;
+    }
+
+    #usa-exp::after {
+    content: "American Experience";
+    top: 70%;
+    }
+
+    #usa-exp::before {
+    content: "1988- 36 Seasons";
+    top: 80%;
+    }
+
+    #usa-exp:hover::after,
+    #usa-exp:hover::before {
+    opacity: 1;
+    }
+
+    #usa-story::after {
+    content: "America The Story of Us";
+    top: 70%;
+    }
+
+    #usa-story::before {
+    content: "2010- 1 Season";
+    top: 80%;
+    }
+
+    #usa-story:hover::after,
+    #usa-story:hover::before {
+    opacity: 1;
+    }
+
+    #vikings::after {
+    content: "Vikings";
+    top: 70%;
+    }
+
+    #vikings::before {
+    content: "2013- 6 Seasons";
+    top: 80%;
+    }
+
+    #vikings:hover::after,
+    #vikings:hover::before {
+    opacity: 1;
+    }
